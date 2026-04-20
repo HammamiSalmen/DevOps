@@ -1,0 +1,19 @@
+version: "3.9"
+services:
+backend:
+build: ./backend
+ports:
+- "3010:3001" # port 3010 sur le PC → port 3001 dans le conteneur
+volumes:
+- ./backend:/app
+environment:
+- NODE_ENV=development
+frontend:
+build: ./frontend
+ports:
+- "3000:3000"
+volumes:
+- ./frontend:/app
+- /app/node_modules
+environment:
+- CHOKIDAR_USEPOLLING=true
