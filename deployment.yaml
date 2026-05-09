@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: mon-appli
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: mon-appli
+  template:
+    metadata:
+      labels:
+        app: mon-appli
+    spec:
+      containers:
+        - name: mon-conteneur
+          image: hammasou/mon-image:latest
+          ports:
+            - containerPort: 80

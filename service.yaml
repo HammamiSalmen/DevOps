@@ -1,0 +1,11 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: mon-appli-service
+spec:
+  selector:
+    app: mon-appli
+  ports:
+    - port: 6969
+      targetPort: 6969
+  type: NodePort
