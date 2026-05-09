@@ -14,6 +14,7 @@ spec:
     spec:
       containers:
         - name: mon-conteneur
-          image: hammasou/mon-image:latest
+          image: hammasou/my-node-app:latest
+          imagePullPolicy: Always
           ports:
             - containerPort: 6969
