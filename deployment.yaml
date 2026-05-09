@@ -16,4 +16,4 @@ spec:
         - name: mon-conteneur
           image: hammasou/mon-image:latest
           ports:
-            - containerPort: 80
+            - containerPort: 6969
